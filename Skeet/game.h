@@ -21,6 +21,8 @@
 #include "point.h"
 #include "velocity.h"
 #include "rifle.h"
+#include "bullet.h"
+#include "bird.h"
 
 // TODO: include your bullet and bird classes
 
