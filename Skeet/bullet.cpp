@@ -1,4 +1,5 @@
 #include "bullet.h"
+#include "uiDraw.h"
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -18,4 +19,14 @@ void Bullet::fire(Point point, float angle)
 	this->angle = angle;
 	this->velocity.setDx(BULLET_SPEED * (-cos(M_PI / 180.0 * angle)));
 	this->velocity.setDy(BULLET_SPEED * (sin(M_PI / 180.0 * angle)));
+}
+
+void Bullet::advance()
+{
+	// TODO
+}
+
+void Bullet::draw()
+{
+	drawDot(this->point);
 }

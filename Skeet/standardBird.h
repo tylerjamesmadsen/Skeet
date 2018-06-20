@@ -6,12 +6,12 @@
 class StandardBird : public Bird
 {
 private:
-
+	//Velocity velocity;
+	//Point point;
+	//bool alive;
 public:
 	StandardBird();
 	~StandardBird();
-
-
 };
 
 #endif // !STANDARD_BIRD_H

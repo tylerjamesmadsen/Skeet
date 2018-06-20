@@ -21,11 +21,12 @@
 #include "point.h"
 #include "velocity.h"
 #include "rifle.h"
-#include "bullet.h"
-#include "bird.h"
 
 // TODO: include your bullet and bird classes
-
+#include "bullet.h"
+#include "standardBird.h"
+#include "toughBird.h"
+#include "sacredBird.h"
 
 #define CLOSE_ENOUGH 15
 
@@ -75,7 +76,7 @@ private:
    std::vector<Bullet> bullets;
    
    // TODO: declare your bird here (e.g., "Bird * bird;")
-
+   Bird * bird;
 
    /*************************************************
     * Private methods to help with the game logic.

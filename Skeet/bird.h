@@ -6,6 +6,12 @@
 class Bird : public FlyingObject
 {
 protected:
+	//Velocity velocity;
+	//Point point;
+	//bool alive;
+
+	const int radius = 15;
+
 	int health;
 	int hitReward;
 
@@ -21,7 +27,8 @@ public:
 	void setHealth(int health) { this->health = health; }
 	void setHitReward(int hitReward) { this->hitReward = hitReward; }
 
-	int hit();
+	virtual int hit();
+	virtual void draw();
 };
 
 #endif // !BIRD

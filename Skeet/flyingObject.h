@@ -8,10 +8,9 @@ class FlyingObject {
 protected:
 	Velocity velocity;
 	Point point;
+	bool alive;
 public:
 	FlyingObject();
-	FlyingObject(Point point);
-	FlyingObject(Point point, Velocity velocity);
 	~FlyingObject();
 
 	Point getPoint() { return this->point; }
@@ -23,7 +22,7 @@ public:
 	bool isAlive();
 	void kill();
 	void advance();
-	void draw();
+	virtual void draw() = 0;
 };
 
 #endif // !FLYING_OBJECT_H
