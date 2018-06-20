@@ -11,12 +11,11 @@ private:
 	//Point point;
 	//bool alive;
 
-	float angle = 60.0f;
+	float angle;
 public:
 	Bullet();
 
 	void fire(Point point, float angle);
-	void advance();
 	void draw();
 };
 #endif // !BULLET_H

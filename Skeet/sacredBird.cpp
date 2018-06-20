@@ -1,4 +1,5 @@
 #include "sacredBird.h"
+#include "uiDraw.h"
 
 SacredBird::SacredBird()
 {
@@ -8,4 +9,13 @@ SacredBird::SacredBird()
 	this->velocity.setDy(0.0f);
 	this->health = 1;
 	this->hitReward = -10;
+}
+
+SacredBird::~SacredBird()
+{
+}
+
+void SacredBird::draw()
+{
+	drawSacredBird(this->point, this->radius);
 }

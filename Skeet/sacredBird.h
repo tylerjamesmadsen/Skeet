@@ -11,6 +11,8 @@ private:
 	//bool alive;
 public:
 	SacredBird();
+	~SacredBird();
 
+	void draw();
 };
 #endif // !SACRED_BIRD_H

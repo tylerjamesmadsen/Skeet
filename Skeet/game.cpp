@@ -210,7 +210,6 @@ void Game :: cleanUpZombies()
       
       // TODO: Clean up the memory used by the bird
 	   delete bird;
-   
    }
    
    // Look for dead bullets
@@ -275,7 +274,7 @@ void Game :: draw(const Interface & ui)
 
    // TODO: Check if you have a valid bird and if it's alive
    // then call its draw method
-	if (bird != NULL and bird->isAlive())
+	if (bird != NULL && bird->isAlive())
 	{
 		bird->draw();
     }

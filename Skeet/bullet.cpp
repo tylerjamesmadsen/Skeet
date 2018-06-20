@@ -21,11 +21,6 @@ void Bullet::fire(Point point, float angle)
 	this->velocity.setDy(BULLET_SPEED * (sin(M_PI / 180.0 * angle)));
 }
 
-void Bullet::advance()
-{
-	// TODO
-}
-
 void Bullet::draw()
 {
 	drawDot(this->point);

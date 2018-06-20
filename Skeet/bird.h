@@ -12,13 +12,11 @@ protected:
 
 	const int radius = 15;
 
-	int health;
-	int hitReward;
+	int health = 1;
+	int hitReward = 1;
 
 public:
 	Bird();
-	Bird(Point point);
-	Bird(Point point, Velocity velocity);
 	~Bird();
 
 	int getHealth() { return this->health; }
@@ -28,7 +26,7 @@ public:
 	void setHitReward(int hitReward) { this->hitReward = hitReward; }
 
 	virtual int hit();
-	virtual void draw();
+	virtual void draw() = 0;
 };
 
 #endif // !BIRD

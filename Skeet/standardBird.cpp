@@ -1,4 +1,5 @@
 #include "standardBird.h"
+#include "uiDraw.h"
 
 StandardBird::StandardBird()
 {
@@ -13,4 +14,9 @@ StandardBird::StandardBird()
 
 StandardBird::~StandardBird()
 {
+}
+
+void StandardBird::draw()
+{
+	drawCircle(this->point, radius);
 }

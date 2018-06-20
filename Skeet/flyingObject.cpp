@@ -1,4 +1,5 @@
 #include "flyingObject.h"
+#include <cassert>
 
 FlyingObject::FlyingObject()
 {
@@ -6,7 +7,7 @@ FlyingObject::FlyingObject()
 	this->point.setY(0.0f);
 	this->velocity.setDx(0.0f);
 	this->velocity.setDy(0.0f);
-	this->alive = true;
+	this->alive = false;
 }
 
 FlyingObject::~FlyingObject()
@@ -21,9 +22,12 @@ bool FlyingObject::isAlive()
 void FlyingObject::kill()
 {
 	this->alive = false;
+	assert(this->isAlive() == false);
+	assert(this->alive == false);
 }
 
 void FlyingObject::advance()
 {
-	// TODO
+	this->point.setX(point.getX() + velocity.getDx());
+	this->point.setY(point.getY() + velocity.getDy());
 }

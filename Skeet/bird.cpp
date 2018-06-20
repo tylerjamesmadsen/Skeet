@@ -8,20 +8,7 @@ Bird::Bird()
 	this->point.setY(0.0f);
 	this->velocity.setDx(0.0f);
 	this->velocity.setDy(0.0f);
-	this->setHealth(1);
-}
-
-Bird::Bird(Point point)
-{
-	this->point = point;
-	this->velocity.setDx(0.0f);
-	this->velocity.setDy(0.0f);
-}
-
-Bird::Bird(Point point, Velocity velocity)
-{
-	this->point = point;
-	this->velocity = velocity;
+	this->health = 1;
 }
 
 Bird::~Bird()
@@ -30,10 +17,11 @@ Bird::~Bird()
 
 int Bird::hit()
 {
-	return hitReward;
-}
+	this->setHealth(this->getHealth() - 1);
+	if (this->getHealth() == 0)
+	{
+		this->kill();
+	}
 
-void Bird::draw()
-{
-	drawCircle(this->point, radius);
+	return hitReward;
 }

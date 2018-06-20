@@ -12,6 +12,8 @@ private:
 public:
 	StandardBird();
 	~StandardBird();
+
+	void draw();
 };
 
 #endif // !STANDARD_BIRD_H
