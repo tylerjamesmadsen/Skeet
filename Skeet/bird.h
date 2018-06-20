@@ -12,8 +12,8 @@ protected:
 
 	const int radius = 15;
 
-	int health = 1;
-	int hitReward = 1;
+	int health;
+	int hitReward;
 
 public:
 	Bird();

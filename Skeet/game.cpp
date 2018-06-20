@@ -17,6 +17,8 @@
 #include "point.h"
 
 #include <vector>
+#include <cassert>
+
 using namespace std;
 
 #define OFF_SCREEN_BORDER_AMOUNT 5
@@ -42,9 +44,11 @@ Game :: ~Game()
 {
    // TODO: Check to see if there is currently a bird allocated
    //       and if so, delete it.
-	if (bird->isAlive())
+	if (bird != NULL)
 	{
+		//bird = NULL;
 		delete bird;
+		bird = NULL;
 	}
 }
 
@@ -132,7 +136,8 @@ Bird* Game :: createBird()
    Bird* newBird = NULL;
 
    // TODO: Fill this in
-   int birdSelect = random(1, 3);
+   int birdSelect = random(1, 4);
+   assert(birdSelect == 1 || birdSelect == 2 || birdSelect == 3);
    switch (birdSelect)
    {
    case 1:
@@ -210,6 +215,7 @@ void Game :: cleanUpZombies()
       
       // TODO: Clean up the memory used by the bird
 	   delete bird;
+	   bird = NULL;
    }
    
    // Look for dead bullets
@@ -274,6 +280,10 @@ void Game :: draw(const Interface & ui)
 
    // TODO: Check if you have a valid bird and if it's alive
    // then call its draw method
+	if (bird != NULL && bird->getHealth() == 0)
+	{
+		assert(bird->isAlive() == false);
+	}
 	if (bird != NULL && bird->isAlive())
 	{
 		bird->draw();

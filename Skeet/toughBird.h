@@ -10,12 +10,13 @@ private:
 	//Point point;
 	//bool alive;
 
-	const int killReward = 2;
+	int killReward;
 public:
 	ToughBird();
 	~ToughBird();
 
 	int getKillReward() { return killReward; }
+	int hit();
 
 	void draw();
 };

@@ -8,7 +8,7 @@ class FlyingObject {
 protected:
 	Velocity velocity;
 	Point point;
-	bool alive = false;
+	bool alive;
 public:
 	FlyingObject();
 	virtual ~FlyingObject();

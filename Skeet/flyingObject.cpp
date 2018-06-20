@@ -7,7 +7,7 @@ FlyingObject::FlyingObject()
 	this->point.setY(0.0f);
 	this->velocity.setDx(0.0f);
 	this->velocity.setDy(0.0f);
-	this->alive = false;
+	this->alive = true;
 }
 
 FlyingObject::~FlyingObject()
